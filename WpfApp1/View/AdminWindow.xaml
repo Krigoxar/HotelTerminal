@@ -1,0 +1,49 @@
+﻿<Window x:Class="WpfApp1.View.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.View"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="454" Width="810" Closed="WindowClosing" ResizeMode="NoResize">
+    <Grid>
+        <Canvas Background="#FF1A1A1A">
+            <ListBox x:Name="UsersListBox" Height="300" d:ItemsSource="{d:SampleData ItemCount=200}" ItemsSource="{Binding Path=UsersList}" Width="270" Canvas.Left="10" Canvas.Top="69" SelectionChanged="UsersListBox_SelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="16" Width="35" Text="{Binding Path=id}" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="16" Width="100" Text="{Binding Path=login}" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="16" Width="100" Text="{Binding Path=password}" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <ListBox x:Name="BookingListBox" Height="300" Width="500" d:ItemsSource="{d:SampleData ItemCount=200}" ItemsSource="{Binding Path=BookingsList}" Canvas.Left="285" Canvas.Top="69">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontSize="16" Width="35" Text="{Binding Path=id}" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="16" Width="35" Text="{Binding Path=userId}" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="16" Width="71" Margin="0,0,10,0" Text="{Binding Path=checkInDate}" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="16" Width="71" Margin="0,0,23,0" Text="{Binding Path=checkOutDate}" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="16" Width="35" Margin="0,0,40,0" Text="{Binding Path=RoomNumber}" HorizontalAlignment="Center" />
+                            <TextBlock FontSize="16" Width="120" Text="{Binding Path=roomType}" HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Button x:Name="DeleteUser" Content="Удалить" Canvas.Left="210" Canvas.Top="374" Width="70" Height="30" FontSize="14" Click="DeleteUser_Click"/>
+            <Button x:Name="DeleteBooking" Content="Удалить" Canvas.Left="695" Canvas.Top="374" Width="70" Height="30" FontSize="14" Click="DeleteBooking_Click"/>
+            <TextBlock Text="ID:" Canvas.Left="15" Canvas.Top="25" Foreground="White" FontSize="16" />
+            <TextBlock Text="Login:" Canvas.Left="51" Canvas.Top="25" Foreground="White" FontSize="16" />
+            <TextBlock Text="Password:" Canvas.Left="151" Canvas.Top="25" Foreground="White" FontSize="16" />
+            <TextBlock Text="ID:" Canvas.Left="290" Canvas.Top="25" Foreground="White" FontSize="16" />
+            <TextBlock Text="User id:" TextAlignment="Center" TextWrapping="Wrap" Canvas.Left="314" Canvas.Top="14" Foreground="White" FontSize="16" Height="54" Width="43" />
+            <TextBlock Text="Check-out date:" TextAlignment="Center" TextWrapping="Wrap" Canvas.Left="446" Canvas.Top="14" Foreground="White" FontSize="16" Width="83" />
+            <TextBlock Text="Check-in date:" TextAlignment="Center" TextWrapping="Wrap" Canvas.Left="357" Canvas.Top="14" Foreground="White" FontSize="16" Width="89" />
+            <TextBlock Text="Room Number:" TextAlignment="Center" TextWrapping="Wrap" Canvas.Left="535" Canvas.Top="14" Foreground="White" FontSize="16" Width="70" />
+            <TextBlock Text="Room Type:" TextAlignment="Center" TextWrapping="Wrap" Canvas.Left="610" Canvas.Top="14" Foreground="White" FontSize="16" Width="70" />
+        </Canvas>
+    </Grid>
+</Window>

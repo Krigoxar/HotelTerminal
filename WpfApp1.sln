@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{37B270AC-2BF3-4263-84B4-095C3BE9A079}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72166635-F69E-4426-89CF-9CE2553C8AA0}"
+	ProjectSection(SolutionItems) = preProject
+		..\Noter\Noter\Noter.csproj = ..\Noter\Noter\Noter.csproj
+		..\Noter\Noter.sln = ..\Noter\Noter.sln
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B270AC-2BF3-4263-84B4-095C3BE9A079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B270AC-2BF3-4263-84B4-095C3BE9A079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37B270AC-2BF3-4263-84B4-095C3BE9A079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37B270AC-2BF3-4263-84B4-095C3BE9A079}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EDD34E66-3BCA-4F27-BB37-31E6C172108E}
+	EndGlobalSection
+EndGlobal

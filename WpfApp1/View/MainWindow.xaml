@@ -1,0 +1,30 @@
+﻿<Window x:Class="praktika.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:praktika"
+        Closing="MainWindow_Closing"  
+        mc:Ignorable="d"
+        Title="Бронирование номеров в гостинице" Height="540" Width="960" ResizeMode="NoResize">
+    <Grid>
+        <Canvas Background="#FF1A1A1A">
+            <Calendar x:Name="calendar" Canvas.Left="551" SelectedDatesChanged="monthCalendar1_DateChanged"  Canvas.Top="67"/>
+            <ComboBox x:Name="Box1" Canvas.Left="789" Canvas.Top="67" Width="120" ItemsSource="{Binding MassivOfDates}" FontSize="20"/>
+            <Label Content="Количество дней:" Canvas.Left="763" Canvas.Top="20" Foreground="White" FontSize="20"/>
+            <Label Content="Дата:" Canvas.Left="612" Canvas.Top="20" Foreground="White" FontSize="20"/>
+            <Label Content="Доступно(кол-во):" Canvas.Left="355" Canvas.Top="20" Foreground="White" FontSize="20"/>
+            <Label x:Name="OneRoomed" Canvas.Left="428"  Content="{Binding OneRoomedcount}" Canvas.Top="83"  FontSize="20" Foreground="White"/>
+            <Label x:Name="TwoRoomed" Canvas.Left="428"  Content="{Binding TwoRoomedcount}" Canvas.Top="143"  FontSize="20" Foreground="White"/>
+            <Label x:Name="ThreeRoomed" Canvas.Left="428"  Content="{Binding ThreeRoomedcount}" Canvas.Top="201"  FontSize="20" Foreground="White"/>
+            <Label x:Name="VipRoomed" Canvas.Left="433"  Content="{Binding VipRoomedcount}" Canvas.Top="259"  FontSize="20" Foreground="White"/>
+            <Button Content="Забронировать" Canvas.Left="343" Canvas.Top="400" FontSize="38" Background="#FF4D4D4D" Foreground="White" Click="Button_Click"/>
+            <StackPanel x:Name="stackPanel" Canvas.Left="104" Canvas.Top="96" Width="234">
+                <RadioButton GroupName="group1" FontSize="20" Height="58" Content="Одноместный номер" Foreground="White" Padding="4,-8,0,0" Checked="RadioButton_Checked"/>
+                <RadioButton GroupName="group1" FontSize="20" Height="60" Content="Двухместный номер" Foreground="White" Padding="4,-8,0,0" Checked="RadioButton_Checked"/>
+                <RadioButton GroupName="group1" FontSize="20" Height="54" Content="Трехместный номер" Foreground="White" Padding="4,-8,0,0" Checked="RadioButton_Checked"/>
+                <RadioButton GroupName="group1" FontSize="20" Height="58" Content="VIP номер" Foreground="White" Padding="4,-8,0,0" Checked="RadioButton_Checked"/>
+            </StackPanel>
+        </Canvas>
+    </Grid>
+</Window>
